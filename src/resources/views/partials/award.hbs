@@ -1,0 +1,35 @@
+<div class="container mt-2 award-block">
+     <div style="text-align: left;" class="post-category mt-2">
+          <span class="post-category-item">
+               <a href="#">
+                    CÁC GIẢI THƯỞNG VÀ THÀNH TỰU
+               </a>
+          </span>
+
+
+
+          <p class="crossbar mt-2"></p>
+     </div>
+     <div style="text-align: left;">
+
+          {{#each listAward}}
+          <div onclick='showImage("{{image}}")' class="award-item">
+               <div class="card" style="width: 18rem;">
+                    <img style="padding: 13px 13px 0px 13px;" src="images/{{image}}" alt="{{description}}">
+                    <div class="card-body">
+                         <p style="font-family: Arial;font-size: 12px;" class="card-text">{{description}}</p>
+                    </div>
+               </div>
+          </div>
+          {{/each}}
+
+
+
+
+
+
+     </div>
+</div>
+<script>
+     document.title = "Giải thưởng"
+</script>

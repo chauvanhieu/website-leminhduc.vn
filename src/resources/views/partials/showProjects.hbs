@@ -1,0 +1,35 @@
+<div class="container mt-2 projects-block">
+     <div class="post-category mt-2">
+          <span class="post-category-item">
+               <a href="/du-an">
+                    Tất cả
+               </a>
+          </span>
+
+          {{#each listCategory}}
+          <span class="post-category-item">
+               <a href="/danh-muc/{{slug}}">
+                    {{title}}
+               </a>
+          </span>
+          {{/each}}
+
+          <p class="crossbar mt-2"></p>
+     </div>
+
+     <div class="row">
+
+          {{#each listProjects}}
+          <div style="padding: 0px 5px !important;" class="col-md-4 mb-2">
+               <a href="/du-an/{{slug}}">
+                    <div class="card">
+                         <img src="/images/{{image}}" class="card-img-top" alt="{{title}}">
+                    </div>
+               </a>
+          </div>
+          {{/each}}
+
+
+
+     </div>
+</div>

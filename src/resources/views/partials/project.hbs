@@ -1,0 +1,27 @@
+<div class="container mt-3 projects-block">
+     <div style="text-align: left;" class="post-category mt-2">
+          <p class="crossbar mt-2"></p>
+     </div>
+     <center>
+          <h1>{{title}}</h1>
+     </center>
+     <div class="row">
+
+          {{#each projectDetails}}
+
+
+          <div style="padding: 0px 3px !important;" class="col-md-4 mb-1">
+               <a href="/images/{{image}}" target="_blank">
+                    <div class="card">
+                         <img src="/images/{{image}}" class="card-img-top" alt="{{title}}">
+                    </div>
+               </a>
+          </div>
+
+
+          {{/each}}
+
+
+
+     </div>
+</div>

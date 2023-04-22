@@ -1,0 +1,55 @@
+{{>adminHeader}}
+<script>
+     function removeAccent(str) {
+          str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          str = str.toLowerCase();
+          str = str.trim();
+          return str.replace(/[^a-z0-9]+/g, "-");
+     }
+     function setSlug() {
+          let titleInput = document.querySelector("#title")
+          let slugInput = document.querySelector("#slug")
+          slugInput.value = removeAccent(titleInput.value)
+     }
+</script>
+<div class="container mt-5">
+     <h4>Tạo dự án mới</h4>
+     <form action="/create-project" method="post" enctype="multipart/form-data">
+          <input type="file" title="Chọn hình ảnh chính cho dự án" name="image" />
+          <p class="crossbar container mt-5"></p>
+          <div class="form-group">
+               <label>Tiêu đề dự án:</label>
+               <input type="text" name="title" id="title" onchange="setSlug()" value="" class="form-control"
+                    placeholder="Nhập tiêu đề dự án...">
+               <input type="hidden" name="slug" id="slug" value="">
+          </div>
+          <div class="form-group">
+               <label>Danh mục:</label>
+               <select class="form-control" name="category_id">
+                    {{#each listCategory}}
+                    <option value="{{id}}">{{title}}</option>
+                    {{/each}}
+               </select>
+          </div>
+          <div class="form-group">
+               <label>Từ khóa: *các từ khóa dùng để hổ trợ tìm kiếm trên google. Mỗi từ khóa được
+                    phân cách bởi dấu "phẩy". <a
+                         style="color: aqua !important; text-decoration: underline !important;"
+                         href="https://seotongthe.vn/cach-tao-keyword-hieu-qua-cho-website/" target="_blank">Xem
+                         hướng dẫn chi tiết</a></label></br>
+               <textarea name="keyword" style="width: 100%;" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+               <label>Mô tả ngắn của bài viết: *Mô tả ngắn về bài viết. Khoảng 300 ký tự. <a
+                         style="color: aqua !important; text-decoration: underline !important;"
+                         href="https://carly.com.vn/blog/meta-description-la-gi/" target="_blank">Xem
+                         hướng dẫn chi tiết</a></label></br>
+               <textarea name="description" style="width: 100%;" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Lưu</button>
+     </form>
+
+
+</div>
+
+{{>footer}}

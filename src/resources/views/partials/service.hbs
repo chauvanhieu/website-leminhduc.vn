@@ -1,0 +1,21 @@
+<div class="container">
+     <div class="post-category mt-2">
+          {{#each listService}}
+
+          <span class="post-category-item">
+               <a href="/dich-vu/{{slug}}">
+                    {{title}}
+               </a>
+          </span>
+          {{/each}}
+
+
+          <p class="crossbar mt-2"></p>
+     </div>
+
+     <div class="post-content container">
+
+          <div>{{{content}}}</div>
+
+     </div>
+</div>

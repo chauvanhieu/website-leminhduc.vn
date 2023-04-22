@@ -1,0 +1,237 @@
+#body {
+  background-color: rgb(29, 28, 28);
+  color: rgb(255, 255, 255);
+  font-family: arial;
+}
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
+.navbar-brand {
+  color: black !important;
+}
+#header {
+  position: relative;
+  z-index: 2;
+}
+
+#navbarNav {
+  justify-content: flex-end;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0) !important;
+  font-weight: 600 !important;
+}
+
+/* css navbar */
+@media only screen and (max-width: 600px) {
+  /* điều kiện cho các thiết bị di động */
+  #header {
+    min-width: 100vw !important;
+    padding: unset !important;
+    margin: unset !important;
+  }
+
+  /* logo-center */
+  .logo-center {
+    margin-top: 145% !important;
+  }
+  .logo-center img {
+    width: 235px !important;
+  }
+  /* logo-center */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* điều kiện cho các thiết bị tablet */
+  #header {
+    min-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* logo-center */
+  .logo-center {
+    margin-top: 100% !important;
+  }
+  .logo-center img {
+    width: 330px !important;
+  }
+  /* logo-center */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* điều kiện cho các thiết bị desktop */
+
+  /* logo-center */
+  .logo-center {
+    margin-top: 27%;
+  }
+
+  /* logo-center */
+
+  .navbar-brand {
+    color: black !important;
+  }
+  #header {
+    width: 680px;
+  }
+  .nav-app {
+    margin: 36px -228px 0px 200px !important;
+  }
+
+  #logo-block {
+    position: fixed;
+    z-index: 999;
+    top: 70%;
+  }
+  #navbarNav {
+    justify-content: flex-end;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0) !important;
+    font-weight: 600 !important;
+  }
+  .navbar {
+    padding: unset !important;
+    height: 25px;
+    padding-left: 10px !important;
+  }
+  .nav-link {
+    line-height: 22px !important;
+    padding: 2px 12px !important;
+    height: 25px !important;
+    text-transform: uppercase !important;
+    font-family: arial !important;
+    font-size: 10px !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+  .nav-item:hover .nav-link {
+    color: #15df07 !important;
+    line-height: 22px !important;
+    padding: 2px 12px !important;
+    height: 25px !important;
+    text-transform: uppercase !important;
+    font-family: arial !important;
+    font-size: 10px !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+}
+/* css navbar */
+
+#carouselExampleIndicators {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -999;
+}
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+.carousel-item {
+  height: 100%;
+  width: 100%;
+}
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.crossbar {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.post-category-item {
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 0px 15px;
+  cursor: pointer;
+  display: inline-block !important;
+}
+.post-category-item:hover a {
+  color: red !important;
+}
+.projects-block .card {
+  border: none !important;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.projects-block .card img {
+  transition: transform 0.3s ease-out;
+  width: 100%;
+  height: 100%;
+}
+.projects-block .card:hover img {
+  transform: scale(1.2);
+}
+.award-block .card {
+  color: black;
+}
+.contact-info {
+  display: block;
+  text-align: center;
+}
+.contact-map iframe {
+  width: 100%;
+}
+.award-block {
+  text-align: left !important;
+}
+.award-item .card {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.project-image {
+  padding: 0 !important;
+  border: none !important;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+  color: black;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}

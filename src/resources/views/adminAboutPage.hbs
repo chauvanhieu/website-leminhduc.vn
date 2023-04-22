@@ -1,0 +1,48 @@
+{{>adminHeader}}
+<div class="container mt-5">
+     <h3>Bài viết giới thiệu</h3>
+     <div class="row">
+
+          <form action="/gioi-thieu/{{id}}" method="post" class="col-sm-12 col-md-12 col-xl-12 col-lg-12">
+               <div class="form-group">
+                    <label>Tiêu đề bài viết: *Tên bài viết. Khoảng 150 ký tự </label>
+                    <input type="text" value="{{title}}" name="title" class="form-control"
+                         placeholder="Nhập tiêu đề bài viết...">
+               </div>
+
+               <div class="form-group">
+                    <label>Nội dung:</label></br>
+                    <textarea name="content" style="width: 100%;" rows="10">{{content}}</textarea>
+               </div>
+
+               <div class="form-group">
+                    <label>Từ khóa: *các từ khóa dùng để hổ trợ tìm kiếm trên google. Mỗi từ khóa được
+                         phân cách bởi dấu "phẩy". <a
+                              style="color: aqua !important; text-decoration: underline !important;"
+                              href="https://seotongthe.vn/cach-tao-keyword-hieu-qua-cho-website/" target="_blank">Xem
+                              hướng dẫn chi tiết</a></label></br>
+                    <textarea name="keyword" style="width: 100%;" rows="3">{{keyword}}</textarea>
+
+
+               </div>
+               <div class="form-group">
+                    <label>Mô tả ngắn của bài viết: *Mô tả ngắn về bài viết. Khoảng 300 ký tự. <a
+                              style="color: aqua !important; text-decoration: underline !important;"
+                              href="https://carly.com.vn/blog/meta-description-la-gi/" target="_blank">Xem
+                              hướng dẫn chi tiết</a></label></br>
+                    <textarea name="description" style="width: 100%;" rows="3">{{description}}</textarea>
+               </div>
+
+               <button class="btn btn-primary " type="submit">Lưu bài viết</button>
+
+
+
+          </form>
+     </div>
+</div>
+<script>
+     CKEDITOR.replace('content', {
+          removePlugins: 'image'
+     });
+</script>
+{{>footer}}

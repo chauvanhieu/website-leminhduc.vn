@@ -1,0 +1,27 @@
+{{>adminHeader}}
+<div class="container mt-5">
+     <h3>Cập nhật giải thưởng</h3>
+
+
+
+     <form action="/giai-thuong/{{id}}" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+               <img style="height: 100px;" src="/images/{{image}}" alt="">
+          </div>
+          <div class="form-group">
+               <label>Chọn file ảnh:</label>
+               <input type="hidden" name="imageDefault" value="{{image}}">
+               <input type="file" id="image" name="image" class="form-control">
+          </div>
+          <div class="form-group">
+               <label>Mô tả ngắn của bài viết: *Mô tả ngắn về giải thưởng. Khoảng 100 ký tự. </label></br>
+               <textarea name="description" style="width: 100%;" rows="3">{{description}}</textarea>
+          </div>
+          <button class="btn btn-primary " type="submit">Lưu</button>
+     </form>
+     <script>
+
+
+     </script>
+</div>
+{{>footer}}

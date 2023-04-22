@@ -1,0 +1,78 @@
+{{>adminHeader}}
+
+<div class="container mt-5">
+     <h4>Hình ảnh chính:</h4>
+     <img src="/images/{{image}}" style="width: 100%;" alt="">
+     <form class="m-3" action="/add-thumnail/{{id}}" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" />
+          <input type="hidden" value="{{image}}" name="imageDefault">
+          <button class="btn btn-primary" type="submit">Tải lên</button>
+     </form>
+     <p class="crossbar container mt-5"></p>
+
+     <form action="/du-an/{{id}}" method="post">
+          <div class="form-group">
+               <label>Tiêu đề dự án:</label>
+               <input type="text" value="{{title}}" name="title" class="form-control"
+                    placeholder="Nhập tiêu đề dự án...">
+          </div>
+
+          <div class="form-group">
+               <label>Danh mục:</label>
+               <select class="form-control" name="category_id">
+                    {{{listCategory}}}
+               </select>
+
+          </div>
+
+
+          <div class="form-group">
+               <label>Từ khóa: *các từ khóa dùng để hổ trợ tìm kiếm trên google. Mỗi từ khóa được
+                    phân cách bởi dấu "phẩy". <a
+                         style="color: aqua !important; text-decoration: underline !important;"
+                         href="https://seotongthe.vn/cach-tao-keyword-hieu-qua-cho-website/" target="_blank">Xem
+                         hướng dẫn chi tiết</a></label></br>
+               <textarea name="keyword" style="width: 100%;" rows="3">{{keyword}}</textarea>
+          </div>
+          <div class="form-group">
+               <label>Mô tả ngắn của bài viết: *Mô tả ngắn về bài viết. Khoảng 300 ký tự. <a
+                         style="color: aqua !important; text-decoration: underline !important;"
+                         href="https://carly.com.vn/blog/meta-description-la-gi/" target="_blank">Xem
+                         hướng dẫn chi tiết</a></label></br>
+               <textarea name="description" style="width: 100%;" rows="3">{{description}}</textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Lưu</button>
+     </form>
+     <p class="crossbar container mt-5"></p>
+     <form class="m-3 float-right" action="/add-image-detail/{{id}}" method="post" enctype="multipart/form-data">
+          <h4>Các hình ảnh chi tiết:</h4>
+          <input type="file" name="image" />
+          <button class="btn btn-secondary" type="submit">Thêm hình ảnh</button>
+     </form>
+     <table class="table table-dark table-hover table-striped table-bordered border-secondary">
+          <thead>
+               <tr>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Action</th>
+               </tr>
+          </thead>
+          <tbody>
+
+               {{#each projectDetail}}
+               <tr>
+                    <td>
+                         <img style="width: 50%;" src="/images/{{image}}" alt="">
+                    </td>
+                    <td>
+                         <a href="/project-detail?action=delete&id={{id}}">
+                              <i style="font-size: 30px; padding: 10px; color: rgb(204, 15, 15);"
+                                   class="fa-sharp fa-solid fa-trash"></i>
+                         </a>
+                    </td>
+               </tr>
+               {{/each}}
+          </tbody>
+     </table>
+</div>
+
+{{>footer}}

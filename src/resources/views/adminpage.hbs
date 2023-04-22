@@ -1,0 +1,71 @@
+{{>adminHeader}}
+<div class="container mt-5">
+
+     <span style="color: red;">Lưu ý: không được bỏ trống bất kỳ thông tin nào dưới đây</span>
+
+
+
+     <form action="/admin" method="post" class="row mt-3">
+
+          <div class="user-config col-sm-12 col-md-12 col-xl-6 col-lg-6">
+               <div class="form-group">
+                    <label>Tên đầy đủ:</label>
+                    <input type="text" value="{{fullname}}" name="fullname" class="form-control"
+                         placeholder="Nhập tên đầy đủ...">
+               </div>
+               <div class="form-group">
+                    <label>Số điện thoại:</label>
+                    <input type="text" value="{{phoneNumber}}" name="phoneNumber" class="form-control"
+                         placeholder="Nhập số điện thoại...">
+               </div>
+               <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" value="{{email}}" name="email" class="form-control"
+                         placeholder="Nhập địa chỉ email...">
+               </div>
+               <div class="form-group">
+                    <label>Địa chỉ:</label>
+                    <input type="text" value="{{address}}" name="address" class="form-control"
+                         placeholder="Nhập địa chỉ...">
+               </div>
+               <div class="form-group">
+                    <label>Tên đăng nhập:</label>
+                    <input type="text" value="{{username}}" name="username" class="form-control"
+                         placeholder="Nhập tên đăng nhập...">
+               </div>
+               <div class="form-group">
+                    <label>Mật khẩu:</label>
+                    <input type="text" value="{{password}}" name="password" class="form-control"
+                         placeholder="Nhập mật khẩu...">
+               </div>
+          </div>
+          <div class="website-config col-sm-12 col-md-12 col-xl-6 col-lg-6">
+
+               <div class="form-group">
+                    <label>Tiêu đề trang chủ:</label>
+                    <input type="text" value="{{title}}" name="title" class="form-control"
+                         placeholder="Nhập tiêu đề cho trang chủ...">
+               </div>
+               <div class="form-group">
+                    <label>Từ khóa cho trang website:</label></br>
+                    <textarea style="width: 100%;" name="keyword" rows="3">{{keyword}}</textarea>
+               </div>
+               <div class="form-group">
+                    <label>Mô tả trang website:</label></br>
+                    <textarea name="description" style="width: 100%;" rows="3">{{description}}</textarea>
+               </div>
+               <div class="form-group">
+                    <label>Mã iframe google map:</label></br>
+                    <textarea name="map" style="width: 100%;" rows="10">{{map}}</textarea>
+               </div>
+               <div class="form-group">
+                    <label>Mã nhúng thẻ head:</label></br>
+                    <textarea name="headContent" style="width: 100%;" rows="10">{{headContent}}</textarea>
+               </div>
+               <button class="btn btn-primary " type="submit">Lưu cấu hình</button>
+          </div>
+
+
+     </form>
+</div>
+{{>footer}}

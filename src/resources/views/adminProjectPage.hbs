@@ -1,0 +1,37 @@
+{{>adminHeader}}
+<div class="container mt-5">
+     <a href="/admin/du-an/create" class="float-right m-1">
+          <button class="btn btn-primary">Tạo dự án mới</button>
+     </a>
+     <table class="table table-dark table-hover table-striped table-bordered border-secondary">
+          <thead>
+               <tr>
+                    <th scope="col" style="width: max-content;">Hình ảnh</th>
+                    <th scope="col">Tiêu đề</th>
+
+                    <th scope="col"></th>
+               </tr>
+          </thead>
+          <tbody>
+               {{#each listProject}}
+               <tr style="cursor: pointer;" onclick="showDetail('{{slug}}')">
+                    <td><img src="/images/{{image}}" style="width: 200px;" alt=""></td>
+                    <td>{{title}}</td>
+
+                    <td>
+                         <a href="/du-an/delete/{{id}}">
+                              <i style="font-size: 30px; padding: 10px; color: rgb(204, 15, 15);"
+                                   class="fa-sharp fa-solid fa-trash"></i>
+                         </a>
+                    </td>
+               </tr>
+               {{/each}}
+          </tbody>
+     </table>
+</div>
+<script>
+     function showDetail(slug) {
+          window.location.href = window.location.href + "/" + slug
+     }
+</script>
+{{>footer}}
